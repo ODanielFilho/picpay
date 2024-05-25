@@ -6,10 +6,10 @@ services:
     expose:
       - "3306"
     environment:
-      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: picpay_db
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: 123
+      MYSQL_USER: root
+      MYSQL_PASSWORD:
     volumes:
       - db_mysql:/var/lib/mysql
 volumes:

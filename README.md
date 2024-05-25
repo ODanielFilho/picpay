@@ -37,6 +37,37 @@
 
 :mag: Baixe o projeto e teste você mesmo na prática.
 
+## Instalação
 
+Instalação das dependências do projeto
+
+```bash
+mvn clean install
+```
+## Run
+
+Criar uma conexão no MySQL para rodar o banco de dados. Após isso os parâmetros **username** e **password** da sua conexão devem ser informados no arquivo application.properties
+```bash
+spring.datasource.username=root
+spring.datasource.password=
+```
+
+## Docker
+
+Será necessário também definir um usuário e uma senha para o banco no arquivo **docker-compose.yml**
+```bash
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: picpay_db
+      MYSQL_USER: root
+      MYSQL_PASSWORD:
+```
+Por padrão o **USER** está configurado como **root**
+
+Após isso, executar o comando:
+
+```bash
+docker compose up -d
+```
 
 Developed by Daniel Filho
